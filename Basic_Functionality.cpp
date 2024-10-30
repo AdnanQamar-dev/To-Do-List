@@ -19,10 +19,10 @@ void Add_Tasks(vector<Task> &tasks) {
     string task_description;
     string due_date;
      
-        cout<<"Enter The Task You Want To Add \n";
+        cout<<" Enter The Task You Want To Add : ";
         cin.ignore();
         getline(cin,task_description);
-        cout<<"Enter it's Due Date \n";
+        cout<<" \n Enter it's Due Date :";
         getline(cin,due_date);
 
         tasks.push_back((task_description,due_date));
@@ -35,7 +35,7 @@ void Tasks_display(vector<Task> &tasks) {
         for (int i = 0; i < tasks.size(); i++) {
             cout << "Task " << i + 1 << ": " 
                  << tasks[i].description 
-                 << " [" << (tasks[i].isDone ? "Done" : "Pending") << "]" << endl;
+                 << " [" << (tasks[i].isDone ? " Done " : " Pending ") << "]" << endl;
         
     }
     cout << "*_______________________________*" << endl;
@@ -44,7 +44,7 @@ void Tasks_display(vector<Task> &tasks) {
 // Function to mark a task as done
 void MarkTaskDone(vector<Task> &tasks) {
     int TaskNumber;
-    cout << "Enter Task number to mark as done: ";
+    cout << "\n Enter Task number to mark as done: ";
     cin >> TaskNumber;
 
     if (TaskNumber < 1 || TaskNumber > tasks.size()) {

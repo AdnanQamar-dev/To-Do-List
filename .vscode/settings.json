@@ -1,7 +1,13 @@
 {
+    "C_Cpp.errorSquiggles": "enabled",
     "files.associations": {
+        "ostream": "cpp",
         "*.tcc": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
-    }
+        "majority element (nlogn)": "cpp"
+    },
+    "codeium.enableCodeLens": "hide_x",
+    "C_Cpp.intelliSenseEngine": "Default",
+    "C_Cpp.default.compilerPath": "C:/path_to_your_compiler/g++.exe",
+    "C_Cpp.default.cppStandard": "c++17"
 }

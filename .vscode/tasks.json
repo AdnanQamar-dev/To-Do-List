@@ -1,4 +1,45 @@
 {
-	"version": "2.0.0",
-	"tasks": []
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++ Build and Run",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "-std=c++17"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "clear": false
+            }
+        },
+        {
+            "label": "Run C++ Program",
+            "type": "shell",
+            "dependsOn": "C++ Build and Run",
+            "command": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "clear": false
+            },
+            "problemMatcher": []
+        }
+    ]
 }
