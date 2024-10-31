@@ -25,12 +25,16 @@ void Add_Tasks(vector<Task> &tasks) {
         cout<<" \n Enter it's Due Date :";
         getline(cin,due_date);
 
-        tasks.push_back((task_description,due_date));
+        tasks.push_back(Task(task_description,due_date));
 
 }
 
 // Function to display tasks
 void Tasks_display(vector<Task> &tasks) {
+
+        if(tasks.empty()){
+            cout<<" No Tasks To Dispay! \n";
+        }
         // Loop through each task and display its status
         for (int i = 0; i < tasks.size(); i++) {
             cout << "Task " << i + 1 << ": " 
@@ -98,7 +102,7 @@ int main() {
 
             case 3: {
                 MarkTaskDone(tasks);
-            }
+            } break;
 
             case 4: {
                 DeleteTask(tasks);
